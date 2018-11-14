@@ -7,38 +7,50 @@ $(document).ready(function() {
   // $(".pep").hide();
 
   $(".btn-green-peppers").click(function(){
-    $(".green-pepper").hide()
-    $(".btn-green-peppers").removeClass("active");
-    $("aside > ul > li:eq(2)").hide();
+    $(".green-pepper").toggle()
+    $(".btn-green-peppers").toggleClass("active");
+    $("aside > ul > li:eq(2)").toggle();
   })
 
   $(".btn-mushrooms").click(function(){
-    $(".mushroom").hide()
-    $(".btn-mushrooms").removeClass("active");
-    $("aside > ul > li:eq(1)").hide();
+    $(".mushroom").toggle()
+    $(".btn-mushrooms").toggleClass("active");
+    $("aside > ul > li:eq(1)").toggle();
   })
 
   $(".btn-pepperonni").click(function(){
-    $(".pep").hide()
-    $(".btn-pepperonni").removeClass("active");
-    $("aside > ul > li:eq(0)").hide();
+    $(".pep").toggle()
+    $(".btn-pepperonni").toggleClass("active");
+    $("aside > ul > li:eq(0)").toggle();
   })
 
-  $(".btn-sauce").removeClass("active");
-
-  $(".btn-crust").removeClass("active");
 
   $(".btn-sauce").click(function(){
-    $(".btn-sauce").addClass("active")
+    $(".btn-sauce").toggleClass("active")
+    $(".sauce").toggle()
+    $("aside > ul > li:eq(3)").toggle();
+
   })
 
   $(".btn-crust").click(function(){
-    $(".btn-crust").addClass("active")
+    $(".btn-crust").toggleClass("active")
+    $(".cheese").toggle()
+    $("aside > ul > li:eq(4)").toggle();
   })
 
-  $("aside > ul > li:gt(2)").hide();
 
-});
 
+   $(".btn-green-peppers").toggleClass("active");
+   $(".green-pepper").hide()
+   $(".btn-mushrooms").removeClass("active");
+   $(".mushroom").toggle()
+   $(".btn-pepperonni").removeClass("active");
+   $(".pep").toggle()
+
+
+     
+  $("aside > ul > li:lt(3)").hide();
+
+}); 
 
 
