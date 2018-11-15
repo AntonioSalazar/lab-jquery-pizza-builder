@@ -27,13 +27,14 @@ $(document).ready(function() {
 
   $(".btn-sauce").click(function(){
     $(".btn-sauce").toggleClass("active")
-    $(".sauce").toggle()
+    $(".sauce").toggleClass("sauce-white")
     $("aside > ul > li:eq(3)").toggle();
-
   })
+  
 
   $(".btn-crust").click(function(){
     $(".btn-crust").toggleClass("active")
+    $(".crust").toggleClass("crust-gluten-free")
     $(".cheese").toggle()
     $("aside > ul > li:eq(4)").toggle();
   })
@@ -51,6 +52,14 @@ $(document).ready(function() {
      
   $("aside > ul > li:lt(3)").hide();
 
-}); 
+  
+  // $("aside > strong").text(function () {
+  //   if ($(".btn-green-peppers").class("active")) {
+  //     return $("aside > li").text()
+  //   }
+  // })
+ 
 
+  
+}); 
 
